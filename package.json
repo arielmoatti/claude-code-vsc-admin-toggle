@@ -1,0 +1,37 @@
+{
+  "name": "claude-code-vsc-admin-toggle",
+  "displayName": "VS Code Admin Toggle",
+  "description": "Status bar button that decides whether VS Code's next launch runs as administrator, so Claude Code gets admin rights only when a task needs them.",
+  "publisher": "arielmoatti",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arielmoatti/claude-code-vsc-admin-toggle"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "administrator",
+    "elevation",
+    "uac",
+    "windows",
+    "claude-code"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "adminToggle.toggle",
+        "title": "Admin Toggle: Switch Next Launch Elevation"
+      }
+    ]
+  }
+}
